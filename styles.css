@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Poppins:wght@400;600&display=swap');
+
+:root {
+  --violet: hsl(257, 40%, 49%);
+  --magenta-soft: hsl(300, 69%, 71%);
+}
+
+body {
+  background-image: url('images/bg-mobile.svg');
+  background-color: var(--violet);
+  background-repeat: no-repeat;
+  font-family: 'Poppins', sans-serif;
+}
+
+main {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container {
+  padding: 15px 35px 20px 35px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.logo {
+  width: 45%;
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+
+.main-img {
+  width: 100%;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 1.5rem;
+  line-height: 35px;
+  font-weight: 600;
+  color: white;
+}
+
+.right p {
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  line-height: 25px;
+}
+
+button {
+  height: 42px;
+  border-radius: 50px;
+  width: 70%;
+  border: none;
+  color: var(--violet);
+  font-weight: 600;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: var(--magenta-soft);
+  color: white;
+}
+
+.social {
+  padding-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+i {
+  border: 1px solid white;
+  border-radius: 999px;
+  padding: 8px;
+  width: 15px;
+  height: 15px;
+  color: white;
+  vertical-align: middle;
+  text-align: center;
+}
+
+i:hover {
+  cursor: pointer;
+  color: var(--magenta-soft);
+  border-color: var(--magenta-soft);
+}
+
+@media screen and (min-width: 375px) {
+  body {
+    background-image: url('images/bg-desktop.svg');
+  }
+
+  .content {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .logo {
+    width: 15%;
+    margin-left: 5%;
+  }
+
+  .left {
+    flex: 1;
+  }
+
+  .right {
+    flex: 1;
+    text-align: left;
+    justify-content: start;
+    margin-top: 30px;
+  }
+
+  .right p {
+    width: 90%;
+    font-size: 1.2rem;
+  }
+
+  button {
+    align-self: flex-start;
+    margin-left: 5%;
+    width: 35%;
+    height: 60px;
+    font-size: larger;
+  }
+
+  h1 {
+    font-size: 3rem;
+    line-height: 70px;
+    width: 90%;
+  }
+
+  .social {
+    justify-content: end;
+    margin-right: 10%;
+  }
+}
